@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/script/script.js" defer></script>
+    <title>About Alpine Running</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div>
+                <a th:href="@{/about}">About</a>
+            </div>
+            <div>
+                <a th:href="@{/contact}">Contact Us</a>
+            </div>
+        </div>
+        <div class="login-content">
+            <div class="login-box">
+                <form>
+                    <h1>Alpine Running Depot</h1>
+                    <div class="input">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+
+                    <div class="display-alert" id="forget">
+                        <a onclick="displayAlert()">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="button">Login</button>
+
+                    <div>
+                        <p>Don't have an account yet?
+                            <a onclick="displayAlert()" class="display-alert" id="sign-up">Sign Up</a>
+                        </p>
+                    </div>
+
+
+                    <div class="test-drive">
+                        <p>Not convinced yet? <a th:href="@{/mainscreen}">Test Drive An Account</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

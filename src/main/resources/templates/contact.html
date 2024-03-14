@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Alpine Running Contact</title>
+</head>
+<body>
+<div class="container">
+    <div class="contact-left">
+        <div class="top">
+            <div class="translucent">
+                <h1 >Alpine Running Depot</h1>
+                <h4 class="sub-logo">Your one-stop shop for trail running gear</h4>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <div class="right">
+        <div class="contact-about-header">
+            <div>
+                <a th:href="@{/about}">About</a>
+            </div>
+            <div>
+                <a th:href="@{/login}">Login</a>
+            </div>
+        </div>
+        <div class ="contact-content">
+            <p>
+                For any questions, special orders, or product inquiries, please contact me by email
+                at <i>nate@alpinerunning.com</i>
+            </p>
+            <p>
+                I can also be reached Monday - Thursday from 9am - 3pm at +48 555 55 55
+            </p>
+            <p>
+                On weekends, I can be reached on remote mountain trails by means of running, mountain biking, or carrier pigeon
+            </p>
+        </div>
+        <div class="contact-image">
+            <img class="contact-photo" src="/images/chicago-basin.png" alt="a man standing on a cliff with a mountain backdrop">
+        </div>
+    </div>
+</div>
+</body>
+</html>
