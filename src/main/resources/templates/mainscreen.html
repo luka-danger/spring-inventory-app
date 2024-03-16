@@ -24,7 +24,7 @@
         </div>
         <div class="bottom"></div>
     </div>
-        <hr>
+    <hr>
     <div id="bg" class="right">
         <div class="header">
             <div>
@@ -49,7 +49,7 @@
             <br>
             <!-- <br> -->
             <div class="add-item">
-                <a th:href="@{/showFormAddInPart}">Add <!--In-house--> Replacement Item</a>
+                <a th:href="@{/showAddPartForm}">Add <!--In-house--> Replacement Item</a>
                 <!-- <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Order Outsourced Item</a> -->
             </div>
             <div class="inventory-table">
@@ -59,14 +59,18 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Inventory</th>
+                        <th>Min</th>
+                        <th>Max</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="tempPart : ${parts}">
-                        <td th:text="${tempPart.name}">1</td>
+                        <td class="item-name" th:text="${tempPart.name}">1</td>
                         <td th:text="${tempPart.price}">1</td>
-                        <td th:text="${tempPart.inv}">1</td>
+                        <td class="item-inventory" th:text="${tempPart.inv}">1</td>
+                        <td th:text="${tempPart.minInventory}">1</td>
+                        <td th:text="${tempPart.maxInventory}">1</td>
                         <td>
                             <a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}">Update</a>
                             <a th:href="@{/deletepart(partID=${tempPart.id})}"
@@ -108,9 +112,9 @@
                     </thead>
                     <tbody>
                     <tr th:each="tempProduct : ${products}">
-                        <td class="product-name" th:text="${tempProduct.name}">1</td>
+                        <td class="item-name" th:text="${tempProduct.name}">1</td>
                         <td th:text="${tempProduct.price}">1</td>
-                        <td class="product-inventory" th:text="${tempProduct.inv}">1</td>
+                        <td class="item-inventory" th:text="${tempProduct.inv}">1</td>
 
                         <td>
                             <a th:href="@{/BuyProductNow(productID=${tempProduct.id})}">Buy Now</a>
@@ -128,3 +132,4 @@
 </div>
 </body>
 </html>
+

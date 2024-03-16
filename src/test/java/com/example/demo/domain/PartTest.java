@@ -8,6 +8,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 /**
  * Project: demoDarbyFrameworks2-master
  * Package: com.example.demo.domain
@@ -156,4 +157,24 @@ class PartTest {
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
     }
+
+    @Test
+    void testMinInventory() {
+        Integer minInventory = 0;
+        partIn.setMinInventory(minInventory);
+        assertEquals(minInventory, partIn.getMinInventory());
+        partOut.setMinInventory(minInventory);
+        assertEquals(minInventory, partOut.getMinInventory());
+    }
+
+    @Test
+    void testMaxInventory() {
+        Integer maxInventory = 100;
+        partIn.setMaxInventory(maxInventory);
+        assertEquals(maxInventory, partIn.getMaxInventory());
+        partOut.setMaxInventory(maxInventory);
+        assertEquals(maxInventory, partOut.getMaxInventory());
+    }
 }
+
+
