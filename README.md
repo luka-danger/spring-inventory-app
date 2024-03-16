@@ -1,5 +1,3 @@
-# D287 Final Project
-
 # *Alpine Running* Store Inventory Spring Boot Application
 
 **Tech Description:** This is a full-stack Spring Boot
